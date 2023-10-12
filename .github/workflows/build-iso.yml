@@ -1,0 +1,16 @@
+name: Build Debian ISO
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build ISO
+        run: |
+          ./build-script.sh  # Replace with the name of your build script
+        shell: bash
